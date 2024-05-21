@@ -1,5 +1,6 @@
 import React from "react";
 import "../index.css";
+import { FaGithub, FaLinkedin } from "react-icons/fa"; // Import icons from react-icons library
 
 const Footer = () => {
   return (
@@ -29,6 +30,20 @@ const Footer = () => {
           </div>
           <button type="submit">Send</button>
         </form>
+        <div className="social-icons">
+          <a
+            href="https://github.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer">
+            <FaGithub />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/yourusername"
+            target="_blank"
+            rel="noopener noreferrer">
+            <FaLinkedin />
+          </a>
+        </div>
       </div>
     </footer>
   );
