@@ -32,13 +32,13 @@ const Footer = () => {
         </form>
         <div className="social-icons">
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/arbielhyn"
             target="_blank"
             rel="noopener noreferrer">
             <FaGithub />
           </a>
           <a
-            href="https://www.linkedin.com/in/yourusername"
+            href="https://www.linkedin.com/in/arbielhyn"
             target="_blank"
             rel="noopener noreferrer">
             <FaLinkedin />

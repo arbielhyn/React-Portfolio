@@ -10,15 +10,15 @@ const App = () => {
   // Dummy projects data
   const projects = [
     {
-      image: "src/assets/assets/placeholder.svg",
+      image: "src/assets/assets/blue 2.jpeg",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin magna nec nulla facilisis,",
     },
     {
-      image: "src/assets/assets/placeholder.svg",
+      image: "src/assets/assets/blue 2.jpeg",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin magna nec nulla facilisis,",
     },
     {
-      image: "src/assets/assets/placeholder.svg",
+      image: "src/assets/assets/blue 2.jpeg",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin magna nec nulla facilisis,",
     },
   ];
