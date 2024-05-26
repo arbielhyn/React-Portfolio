@@ -6,7 +6,6 @@ const Footer = () => {
   return (
     <footer className="custom-footer">
       <div className="custom-container">
-        <h2>Contact Me</h2>
         <form className="custom-contact-form">
           <div className="custom-form-group">
             <label htmlFor="email">Email:</label>
@@ -14,7 +13,7 @@ const Footer = () => {
               type="email"
               id="email"
               name="email"
-              placeholder="Enter your email"
+              placeholder="arbielhyn@gmail.com"
               required
             />
           </div>
@@ -24,7 +23,7 @@ const Footer = () => {
               type="tel"
               id="phone"
               name="phone"
-              placeholder="Enter your phone number"
+              placeholder="(204) 996 - 2485"
               required
             />
           </div>

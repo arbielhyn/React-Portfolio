@@ -198,29 +198,31 @@ h3 {
 .custom-form-group input {
   width: 100%;
   padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
   font-size: 16px;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid #ffffff;
 }
 
 .custom-form-group input:focus {
   outline: none;
-  border-color: #61dafb;
+  border-color: #e1e3e3;
 }
 
 .custom-contact-form button {
   width: 150px;
   padding: 10px;
-  background-color: #414242;
-  color: white;
+  background-color: transparent;
+  color: #ccc;
   border: none;
-  border-radius: 5px;
   font-size: 16px;
+  text-align: left;
   cursor: pointer;
+  transition: transform 0.3s ease-in-out;
 }
 
 .custom-contact-form button:hover {
-  background-color: #5d5d5d;
+  color: #66a7d3;
 }
 
 .social-icons {
