@@ -1,10 +1,14 @@
 import React from "react";
+import { IoHardwareChipSharp } from "react-icons/io5"; // Importing the chip icon from react-icons/io5 library
 import "../index.css";
 
 const Skills = () => {
   return (
     <div className="skills-container">
-      <h4 className="SkillsCategory">Skills</h4>
+      <div className="skills-icon-container">
+        <IoHardwareChipSharp className="skills-icon" />
+      </div>
+      <h1 className="about-title">Skills and Technology</h1>
       <div className="skills-buttons">
         <button className="skill-button">HTML</button>
         <button className="skill-button">CSS</button>

@@ -10,16 +10,28 @@ const App = () => {
   // Dummy projects data
   const projects = [
     {
-      image: "src/assets/assets/blue 2.jpeg",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin magna nec nulla facilisis,",
+      image: "src/assets/assets/Blog.png",
+      title: "Dynamic Blogging Platform",
+      text: "Developed a dynamic blogging platform with PHP, granting users CRUD capabilities for seamless post management. Utilized phpMyAdmin for efficient database storage.",
+      link: "https://example.com/project1",
     },
     {
-      image: "src/assets/assets/blue 2.jpeg",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin magna nec nulla facilisis,",
+      image: "src/assets/assets/Road Closure.png",
+      title: "Road Closure Information",
+      text: "Developed an AJAX search form to let users find road closures in Winnipeg, integrating real-time data from the Open Data API for up-to-date information.",
+      link: "https://arbielhyn.github.io/Road-Closure/",
     },
     {
-      image: "src/assets/assets/blue 2.jpeg",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin magna nec nulla facilisis,",
+      image: "src/assets/assets/Roastly.png",
+      title: "Coffee CMS",
+      text: "Developed a dynamic CMS for showcasing coffee and tea drinks with a comprehensive admin dashboard for seamless CRUD operations. Users can create posts and comment, fostering an interactive community. The visually appealing display enhances user experience and encourages exploration.",
+      link: "https://example.com/project1",
+    },
+    {
+      image: "src/assets/assets/Weather Forecast.png",
+      title: "Weather Forecast",
+      text: "Developed a React-based weather site using an API for real-time forecasts, displaying current conditions, interval forecasts, and weekly averages. Implemented dynamic background color changes based on weather.",
+      link: "https://xz5n4m.csb.app/",
     },
   ];
 
@@ -31,25 +43,30 @@ const App = () => {
 
   const scrollToSection = (e, section) => {
     e.preventDefault();
+    let offset = 0;
     switch (section) {
       case "landing":
-        landingRef.current.scrollIntoView({ behavior: "smooth" });
+        offset = landingRef.current.offsetTop;
         break;
       case "about":
-        aboutRef.current.scrollIntoView({ behavior: "smooth" });
+        offset = aboutRef.current.offsetTop;
         break;
       case "skills":
-        skillsRef.current.scrollIntoView({ behavior: "smooth" });
+        offset = skillsRef.current.offsetTop;
         break;
       case "projects":
-        projectsRef.current.scrollIntoView({ behavior: "smooth" });
+        offset = projectsRef.current.offsetTop;
         break;
       case "contact":
-        contactRef.current.scrollIntoView({ behavior: "smooth" });
+        offset = contactRef.current.offsetTop;
         break;
       default:
         break;
     }
+    window.scrollTo({
+      top: offset - 250, // Adjust offset as needed
+      behavior: "smooth",
+    });
   };
 
   return (

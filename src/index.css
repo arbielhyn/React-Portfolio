@@ -16,6 +16,7 @@ body {
   font-family: "Inter", sans-serif; /* Set font family */
 }
 
+/* Navbar styles */
 .navbar {
   display: flex;
   justify-content: space-between; /* Center horizontally */
@@ -23,15 +24,18 @@ body {
   padding: 2rem; /* Add padding for spacing */
 }
 
-.navbar-brand {
-  color: #ffffff;
-  font-weight: bold;
-  font-size: 2rem;
-}
-
 .navbar-nav {
   display: flex;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px; /* Adjust height as needed */
+  background-color: #21212340;
+  padding: 0 20px; /* Add padding for inner content spacing */
+  z-index: 1000; /* Ensure navbar is on top of other content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
 }
 
 .navbar-link {
@@ -45,12 +49,13 @@ body {
   color: #8fa0d4;
 }
 
+/* About section styles */
 .about-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 200px;
-  margin-bottom: 200px;
+  margin-top: 160px;
+  margin-bottom: 150px;
 }
 
 h1 {
@@ -79,8 +84,8 @@ h3 {
 }
 
 .about-image {
-  width: 400px; /* Adjust as needed */
-  height: 400px; /* Adjust as needed */
+  width: 450px; /* Adjust as needed */
+  height: 450px; /* Adjust as needed */
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
@@ -99,13 +104,14 @@ h3 {
 .about-title {
   font-size: 1.5rem;
   margin-bottom: 20px;
+  color: white;
 }
 
 .about-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 800px;
+  max-width: 900px;
   text-align: center;
 }
 
@@ -118,56 +124,113 @@ h3 {
 }
 
 .about-paragraph {
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   line-height: 1.6;
   text-align: left;
 }
+.about-paragraph a {
+  color: #ffffff90; /* Light grey color for links */
+  text-decoration: none;
+  font-weight: bold;
+}
 
+.about-paragraph a:hover {
+  text-decoration: underline;
+  color: #555; /* Darker grey color on hover */
+}
+
+.skills-icon-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+.skills-icon,
+.about-icon {
+  font-size: 25px; /* Adjust icon size as needed */
+  color: #fffefe; /* Light grey color */
+}
+
+/* Skills category styles */
 .SkillsCategory {
   color: #ccc;
   text-align: center;
 }
+
+/* Projects section styles */
 .projects {
   margin: 50px auto;
-  width: 90%;
-  margin-bottom: 100px;
+  width: 80%; /* Adjust width as needed */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
+  gap: 20px; /* Gap between grid items */
 }
 
 .project-box {
-  box-shadow: 10 8px 32px 0 rgba(0, 0, 0, 0.2); /* Neutral grey hue */
+  position: relative;
   border-radius: 10px;
-  padding: 20px;
-  text-align: center;
-  margin-left: 10px;
-  margin-right: 10px; /* Add margin-right to create gaps between boxes */
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add box shadow for depth */
+}
+
+.project-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 .project-image {
   width: 100%;
-  height: auto;
-  border: #3d3e41 1px solid;
-  border-radius: 8px;
-  margin-bottom: 10px;
+  height: 350px; /* Adjust height as needed */
+  object-fit: cover; /* Ensures image covers the container */
   transition: transform 0.4s ease-in-out;
 }
 
 .project-image:hover {
-  transform: scale(1.03);
+  transform: scale(1.03); /* Increase size on hover */
 }
-.project-text {
-  font-size: 10px;
-  color: #ccc;
+
+.project-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 30px; /* Adjust padding as needed */
+  box-sizing: border-box; /* Include padding in the element's width and height */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  opacity: 0; /* Initially hidden */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+.project-box:hover .project-content {
+  opacity: 1; /* Show content on hover */
+}
+
+.project-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
   text-align: center;
 }
 
+/* Footer styles */
 .custom-footer {
-  background-color: #252525;
+  background-color: #222224;
   color: white;
   padding: 50px 0;
 }
 
 .custom-container {
-  max-width: 800px;
+  max-width: 780px;
   margin: 0 auto;
   padding: 0 20px;
   position: relative; /* Add position relative */
@@ -180,8 +243,8 @@ h3 {
 .custom-contact-form {
   display: flex;
   flex-direction: column;
-  border-right: 2px solid white; /* Add border on the right */
-  padding-right: 200px; /* Add padding on the right */
+  border-right: 1px solid white; /* Add border on the right */
+  padding-right: 100px; /* Add padding on the right */
   margin-right: 200px; /* Add margin on the right */
 }
 
@@ -232,7 +295,7 @@ h3 {
   align-items: flex-end; /* Align icons horizontally to the right */
   margin-top: 20px; /* Add margin-top to create space between form and icons */
   position: absolute; /* Position icons absolutely */
-  margin-top: -150px; /* Add margin-top to create space between form and icons */
+  margin-top: -125px; /* Add margin-top to create space between form and icons */
   padding-left: 650px; /* Add padding-left to create space from the border */
 }
 
@@ -250,9 +313,14 @@ h3 {
   color: #8fa0d4; /* Change color on hover */
 }
 
-.skills-container {
+.skills-container,
+.project-container {
   text-align: center;
   margin: 50px auto;
+}
+
+.project-container {
+  margin-top: 100px;
 }
 
 .skills-buttons {
@@ -274,4 +342,63 @@ h3 {
 
 .skill-button:hover {
   background-color: rgba(52, 52, 57, 0.7);
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items */
+  }
+
+  .navbar-nav {
+    height: auto; /* Auto height for mobile */
+    position: relative; /* Remove fixed positioning */
+    background-color: #212123; /* Dark background for mobile */
+    box-shadow: none; /* Remove shadow */
+    padding: 10px; /* Adjust padding */
+  }
+
+  .navbar-link {
+    padding: 0.5rem; /* Adjust padding */
+  }
+
+  .about-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items */
+    margin-top: 100px; /* Adjust margin */
+    margin-bottom: 100px; /* Adjust margin */
+  }
+
+  .about-image {
+    width: 300px; /* Adjust width */
+    height: 300px; /* Adjust height */
+    margin-left: 0; /* Remove margin */
+  }
+
+  .about-text {
+    max-width: 100%; /* Full width text */
+    padding: 20px; /* Adjust padding */
+    text-align: center; /* Center align text */
+  }
+
+  .projects {
+    width: 90%; /* Adjust width */
+    grid-template-columns: repeat(1, 1fr); /* Single column */
+  }
+
+  .project-image {
+    height: 250px; /* Adjust height */
+  }
+
+  .custom-container {
+    padding: 0 10px; /* Adjust padding */
+  }
+
+  .social-icons {
+    position: static; /* Remove absolute positioning */
+    margin-top: 20px; /* Adjust margin */
+    padding-left: 0; /* Remove padding */
+  }
 }
